@@ -46,6 +46,8 @@ public class Hospital
     {
         Hospital hospital=new Hospital();
         hospital.datos(hospital);
+        //new InterfazHospital(hospital);
+        //new Inp();
         hospital.getUnidades();
         //Datos datos = new Datos();
         //datos.datear(/*hospital*/);
