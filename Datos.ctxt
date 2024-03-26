@@ -2,6 +2,6 @@
 comment0.target=Datos
 comment1.params=
 comment1.target=Datos()
-comment2.params=
-comment2.target=void\ datear()
+comment2.params=hospital
+comment2.target=void\ datear(Hospital)
 numComments=3

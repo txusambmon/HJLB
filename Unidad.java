@@ -30,6 +30,24 @@ public class Unidad
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
+    public String getNombre(){
+        return nombre;
+    }
+    public int getCapacidad(){
+        return capacidad;
+    }
+    public int getOcupacion(){
+        return ocupacion;
+    }
+    public int getLibres(){
+        return capacidad-ocupacion;
+    }
+    public String getInfo(){
+        return "Nombre: "+nombre +"\nCapacidad: "+capacidad+"\nOcupacion: "+ocupacion+"\nLibres: "+this.getLibres();
+    }
+    public void printInfo(){
+        System.out.println(this.getInfo());
+    }
     public void ocupar(int y)
     {
         // put your code here

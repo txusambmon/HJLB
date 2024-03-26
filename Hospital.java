@@ -17,7 +17,7 @@ public class Hospital
     public Hospital()
     {
         // initialise instance variables
-        unidades = new ArrayList<>();
+        unidades = new ArrayList<Unidad>();
         
     }
 
@@ -35,16 +35,20 @@ public class Hospital
     {
         // put your code here
         Datos datos = new Datos();
-        datos.datear(/*hospital*/);
+        datos.datear(this);
     }
-    
+    public void getUnidades(){
+        unidades.stream()
+                .forEach(unidad-> System.out.println(unidad.getNombre()));
+        
+    }
     public static void main(String[] args)
     {
         Hospital hospital=new Hospital();
         hospital.datos(hospital);
-        
-        Datos datos = new Datos();
-        datos.datear(/*hospital*/);
+        hospital.getUnidades();
+        //Datos datos = new Datos();
+        //datos.datear(/*hospital*/);
 
         
     }
