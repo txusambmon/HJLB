@@ -35,6 +35,17 @@ public class Hospital
     {
         // put your code here
         Datos datos = new Datos();
-        datos.datear(hospital);
+        datos.datear(/*hospital*/);
+    }
+    
+    public static void main(String[] args)
+    {
+        Hospital hospital=new Hospital();
+        hospital.datos(hospital);
+        
+        Datos datos = new Datos();
+        datos.datear(/*hospital*/);
+
+        
     }
 }
