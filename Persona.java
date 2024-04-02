@@ -8,15 +8,15 @@
 public class Persona
 {
     // instance variables - replace the example below with your own
-    public int id;
+    public String dni;
     public String nombre;
     /**
      * Constructor for objects of class Persona
      */
-    public Persona(String nombre, int id)
+    public Persona(String nombre, String dni)
     {
         // initialise instance variables
-        this.id = id;
+        this.dni = dni;
         this.nombre= nombre;
     }
 
@@ -26,15 +26,15 @@ public class Persona
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int getId()
+    public String getDni()
     {
-        return id;
+        return dni;
     }
     public String getNombre(){
         return nombre;
     }
     public String getInfo(){
-        return "Nombre: "+nombre +"\nId: "+id;
+        return "Nombre: "+nombre +"\nDNI: "+dni;
     }
     public void printInfo(){
         System.out.println(this.getInfo());

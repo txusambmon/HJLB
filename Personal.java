@@ -1,25 +1,26 @@
 import java.util.*;
 
 /**
- * Write a description of class Paciente here.
+ * Write a description of class Personal here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Paciente extends Persona
+public class Personal extends Persona
 {
     // instance variables - replace the example below with your own
-    public Historial historial;
-    public Date proxCita;
+    public Servicio servicio;
+    public String especialidad; 
+    public String turnoTrabajo; 
     public Unidad unidad;
     /**
-     * Constructor for objects of class Paciente
+     * Constructor for objects of class Personal
      */
    
-    public Paciente(String nombre,String dni){
+    public Personal(String nombre,String dni){
         // initialise instance variables
         super(nombre,dni);
-        this.historial= new Historial(this);
+        
     }
 
     /**
