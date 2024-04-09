@@ -10,6 +10,7 @@ public class Hospital
 {
     // instance variables - replace the example below with your own
     public List<Unidad> unidades;
+    public List<Servicio> servicios;
 
     /**
      * Constructor for objects of class hospital
@@ -18,7 +19,7 @@ public class Hospital
     {
         // initialise instance variables
         unidades = new ArrayList<Unidad>();
-        
+        servicios = new ArrayList<Servicio>();
     }
 
     /**
@@ -30,7 +31,9 @@ public class Hospital
     public void agregarUnidad(Unidad unidad){
     unidades.add(unidad);
     }
-    
+    public void agregarServicio(Servicio servicio){
+    servicios.add(servicio);
+    }
     public void datos(Hospital hospital)
     {
         // put your code here
@@ -39,8 +42,25 @@ public class Hospital
     }
     public void getUnidades(){
         unidades.stream()
-                .forEach(unidad-> System.out.println(unidad.getNombre()));
+                .forEach(unidad-> {
+                    System.out.println(unidad.getNombre());
+                    List<Personal> empleados= unidad.getEmpleados();
+                    empleados.forEach(empleado->System.out.println(empleado.getInfo()));
+                });
         
+    }
+    public void getServicios(){
+        servicios.stream()
+                .forEach(servicio-> {
+                    System.out.println(servicio.getNombre());
+                    List<Personal> empleados= servicio.getEmpleados();
+                    empleados.forEach(empleado->System.out.println(empleado.getInfo()));
+                });
+        //servicios.stream()
+               // .forEach(servicio-> System.out.println(servicio.getEmpleados()));
+                         
+                //servicio.stream()
+                      //  .forEach(empleado-> empleado.printinfo()));
     }
     public static void main(String[] args)
     {
@@ -49,8 +69,8 @@ public class Hospital
         //new InterfazHospital(hospital);
         //new Inp();
         hospital.getUnidades();
-        //Datos datos = new Datos();
-        //datos.datear(/*hospital*/);
+        
+        hospital.getServicios();
 
         
     }

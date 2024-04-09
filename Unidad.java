@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of class Unidad here.
@@ -11,6 +12,7 @@ public class Unidad
     public String nombre;
     public int capacidad;
     public int ocupacion;
+    public List<Personal> personal;
     //meter relaciones personal y pacientes y estudiantes
     
     /**
@@ -22,14 +24,15 @@ public class Unidad
         this.nombre=nombre;
         this.capacidad=capacidad;
         this.ocupacion=0;
+        personal = new ArrayList<Personal>();
     }
-
     /**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
+    
     public String getNombre(){
         return nombre;
     }
@@ -50,10 +53,20 @@ public class Unidad
     }
     public void ocupar(int y)
     {
-        // put your code here
         if (this.ocupacion+y <= this.capacidad){
         this.ocupacion=this.ocupacion+y;}else{
         System.out.println("Excede la capacidad de la Unidad");
     }
-}
+    }
+    public void agregarPersonal(Personal empleado){
+        personal.add(empleado);
+    }
+    public void getPersonal(){
+        personal.stream()
+                .forEach(empleado-> System.out.println(empleado.getInfo()));
+        
+    }
+    public List<Personal> getEmpleados(){
+        return personal;
+    }
 }

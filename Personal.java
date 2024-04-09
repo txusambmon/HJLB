@@ -17,10 +17,13 @@ public class Personal extends Persona
      * Constructor for objects of class Personal
      */
    
-    public Personal(String nombre,String dni){
+    public Personal(String nombre,String dni,Servicio servicio,Unidad unidad){
         // initialise instance variables
         super(nombre,dni);
-        
+        this.unidad=unidad;
+        this.servicio=servicio;
+        servicio.agregarPersonal(this);
+        unidad.agregarPersonal(this);
     }
 
     /**

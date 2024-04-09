@@ -14,6 +14,20 @@ public void datear(Hospital hospital){
     hospital.agregarUnidad(U1);
     hospital.agregarUnidad(uci);
     hospital.agregarUnidad(Planta1);
+    
+    Servicio Gerencia = new Servicio("Gerencia");
+    Servicio Medicina = new Servicio("Medicina");
+    Servicio Enfermeria = new Servicio("Enfermeria");
+    hospital.agregarServicio(Gerencia);
+    hospital.agregarServicio(Medicina);
+    hospital.agregarServicio(Enfermeria);
+    
+    Personal p1=new Personal("Pepe Gotera", "1234",Medicina,U1);
+    Personal p2=new Personal("Doctor Muerte", "666",Medicina,uci);
+    Personal p3=new Personal("Doña FIga", "00",Gerencia,U1);
+    Personal p4=new Personal("Kato Kito", "0001",Enfermeria,Planta1);
+    
+    
 }
 
 }
