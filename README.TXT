@@ -1,5 +1,7 @@
+# EL HOSPITAL
+
 ------------------------------------------------------------------------
-# Esta es la Practica d ela asignatura de POO para el curso 2023/2024:
+Esta es la Practica d ela asignatura de POO para el curso 2023/2024:
 ------------------------------------------------------------------------
 
 PROJECT TITLE: Hospital
