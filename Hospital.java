@@ -49,6 +49,17 @@ public class Hospital
                 });
         
     }
+    public void getFormacion(){
+        unidades.stream()
+                .forEach(unidad-> {
+                    if(unidad.getNombre().equals("Formación")){
+                    System.out.println(unidad.getNombre());
+                    //List<Estudiante> estudiantes= unidad.getEstudiantes();
+                   // estudiantes.forEach(estudiante->System.out.println(estudiante.getInfo()));
+                }
+                });
+        
+    }
     public void getServicios(){
         servicios.stream()
                 .forEach(servicio-> {

@@ -26,7 +26,11 @@ public void datear(Hospital hospital){
     Personal p2=new Personal("Doctor Muerte", "666",Medicina,uci);
     Personal p3=new Personal("Doña FIga", "00",Gerencia,U1);
     Personal p4=new Personal("Kato Kito", "0001",Enfermeria,Planta1);
-    
+    Formacion formacion=new Formacion();
+    hospital.agregarUnidad(formacion);  
+    Estudiante e1=new Estudiante("zipi","73473",formacion);
+    Estudiante e2=new Estudiante("zape","347",formacion);
+    Estudiante e3=new Estudiante("zopo","742",formacion);
     
 }
 
