@@ -34,33 +34,49 @@ public class Hospital
     public void agregarServicio(Servicio servicio){
     servicios.add(servicio);
     }
-    public void datos(Hospital hospital)
+    public void iniciar(Hospital hospital)
     {
-        // put your code here
         Datos datos = new Datos();
         datos.datear(this);
     }
     public void getUnidades(){
+        System.out.println("UNIDADES\n");
         unidades.stream()
                 .forEach(unidad-> {
                     System.out.println(unidad.getNombre());
-                    List<Personal> empleados= unidad.getEmpleados();
-                    empleados.forEach(empleado->System.out.println(empleado.getInfo()));
+                    //List<Personal> empleados= unidad.getEmpleados();
+                    //empleados.forEach(empleado->System.out.println(empleado.getInfo()));
                 });
         
     }
     public void getFormacion(){
+        System.out.println("FORMACION\n");
         unidades.stream()
                 .forEach(unidad-> {
                     if(unidad.getNombre().equals("Formación")){
                     System.out.println(unidad.getNombre());
-                    //List<Estudiante> estudiantes= unidad.getEstudiantes();
+                   // List<Estudiante> estudiantes= unidad.getEstudiantes();
                    // estudiantes.forEach(estudiante->System.out.println(estudiante.getInfo()));
                 }
                 });
         
     }
     public void getServicios(){
+        System.out.println("SERVICIOS\n");
+        servicios.stream()
+                .forEach(servicio-> {
+                    System.out.println(servicio.getNombre());
+                    List<Personal> empleados= servicio.getEmpleados();
+                    empleados.forEach(empleado->System.out.println(empleado.getInfo()));
+                });
+        //servicios.stream()
+               // .forEach(servicio-> System.out.println(servicio.getEmpleados()));
+                         
+                //servicio.stream()
+                      //  .forEach(empleado-> empleado.printinfo()));
+    }
+    public void getPersonal(){
+        System.out.println("Todo el personal\n");
         servicios.stream()
                 .forEach(servicio-> {
                     System.out.println(servicio.getNombre());
@@ -76,12 +92,18 @@ public class Hospital
     public static void main(String[] args)
     {
         Hospital hospital=new Hospital();
-        hospital.datos(hospital);
+        hospital.iniciar(hospital);
+        Nivel2 nivel2=new Nivel2();
+        nivel2.nivel2(hospital);
+        Nivel3 nivel3=new Nivel3();
+        nivel3.nivel3(hospital);
         //new InterfazHospital(hospital);
         //new Inp();
         hospital.getUnidades();
         
-        hospital.getServicios();
+        //hospital.getServicios();
+        //hospital.getPersonal();
+        
 
         
     }

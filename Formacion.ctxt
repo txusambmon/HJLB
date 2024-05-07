@@ -11,4 +11,6 @@ comment3.params=
 comment3.target=void\ printEstudiantes()
 comment4.params=
 comment4.target=java.util.List\ getEstudiantes()
-numComments=5
+comment5.params=p\ f
+comment5.target=void\ darClase(Personal,\ Fecha)
+numComments=6

@@ -17,7 +17,7 @@ public class ConsultasExternas extends Unidad
     public ConsultasExternas()
     {
         // initialise instance variables
-        super("UCI",10);
+        super("Consultas Externas",100);
     }
 
     

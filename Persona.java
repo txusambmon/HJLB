@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Persona
+public abstract class Persona
 {
     // instance variables - replace the example below with your own
     public String dni;

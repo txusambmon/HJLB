@@ -9,9 +9,12 @@ import java.util.*;
 public class Paciente extends Persona
 {
     // instance variables - replace the example below with your own
-    public Historial historial;
-    public Date proxCita;
-    public Unidad unidad;
+    protected Historial historial;
+    protected Date proxCita;
+    protected Unidad unidad;
+    protected boolean ingresado;
+    protected int room;
+    
     /**
      * Constructor for objects of class Paciente
      */
@@ -33,5 +36,18 @@ public class Paciente extends Persona
     }
     public void printInfo(){
         System.out.println(this.getInfo());
+    }
+    public boolean ingresado(){
+        return ingresado;
+    }
+    protected void ingresar(Unidad unidad,int room){
+        this.unidad=unidad;
+        if(room>unidad.getCapacidad()){
+        System.out.println("esa habitación no existe");        
+        }else{
+        this.room=room;
+        }
+        System.out.println("El paciente "+this.getNombre()+" ha sido ingresado en la habitación "
+        +room+" en la unidad "+unidad.getNombre()); 
     }
 }

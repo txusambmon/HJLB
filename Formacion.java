@@ -9,7 +9,7 @@ import java.util.*;
 public class Formacion extends Unidad
 {
     // instance variables - replace the example below with your own
-    private ArrayList<Estudiante> estudiantes;
+    public ArrayList<Estudiante> estudiantes;
 
     /**
      * Constructor for objects of class Formacion
@@ -18,6 +18,7 @@ public class Formacion extends Unidad
     {
         // initialise instance variables
         super("Formación",50);
+        estudiantes= new ArrayList<>();
     }
 
     /**
@@ -37,5 +38,9 @@ public class Formacion extends Unidad
     }
     public List<Estudiante> getEstudiantes(){
         return estudiantes;
+    }
+    public void darClase(Personal p,Fecha f){
+        System.out.println("clase con "+p.getNombre() +" el día "+f+" en turno de "+p.getTurno());
+        p.calendario.agregarCita(f, new Cita(p,this,f));
     }
 }

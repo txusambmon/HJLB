@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Pruebas
+comment0.text=\r\n\ Es\ la\ unidad\ de\ hospitalizaci\u00F3n.\r\n\ \r\n
+comment1.params=
+comment1.target=Pruebas()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Pruebas\r\n
+comment2.params=p
+comment2.target=void\ nuevoPaciente(Paciente)
+numComments=3
